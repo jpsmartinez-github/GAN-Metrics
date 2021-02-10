@@ -1,0 +1,2 @@
+Call snippets from repository's root path, appending it to `PYTHONPATH`.
+Example: PYTHONPATH=$PYTHONPATH:. python snippets/score_custom_dataset.python
