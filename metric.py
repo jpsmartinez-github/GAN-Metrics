@@ -349,7 +349,10 @@ def ent(M, epsilon):
 eps = 1e-20
 def inception_score(X):
     kl = X * ((X+eps).log()-(X.mean(0)+eps).log().expand_as(X))
-    score = np.exp(kl.sum(1).mean())
+    if len(kl.shape) == 1:
+        score = np.exp(kl.sum(0).mean())
+    else:
+        score = np.exp(kl.sum(1).mean())
 
     return score
 
