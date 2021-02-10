@@ -203,3 +203,13 @@ main2.pdf
 
 #MAC
 .DS_Store
+
+# Virtualenv
+.venv/
+
+# Input/Output data
+data/
+output/
+
+# Temp files
+*.*~
